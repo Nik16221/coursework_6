@@ -27,8 +27,7 @@ class User(AbstractBaseUser):
     def has_module_perms(self, app_label):
         return self.is_admin
 
-        # эта константа определяет поле для логина пользователя
-
+    # эта константа определяет поле для логина пользователя
     USERNAME_FIELD = 'email'
 
     # эта константа содержит список с полями,
@@ -37,7 +36,6 @@ class User(AbstractBaseUser):
 
     # для корректной работы нам также необходимо
     # переопределить менеджер модели пользователя
-
     objects = UserManager()
 
     @property
